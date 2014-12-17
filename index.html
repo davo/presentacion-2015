@@ -90,17 +90,7 @@
 
 					Orden del d&iacute;a: 
 					
-				  	<input type="checkbox" data-toggle="switch" unchecked name="oddoff" data-filter-value="orden" id="odd"/>
 
-					<select class="filter option-set" data-filter-group="ministerio">
-						<option data-filter-value="" selected="selected">Ver todos los ministerios</option>
-						<option data-filter-value=".MDEGC">Ministerio de Desarrollo Económico</option>
-						<option data-filter-value=".MEGC">Ministerio de Educación</option>
-						<option data-filter-value=".SECGCYAC">Secretaría de Gestión Comunal y Atención Ciudadana</option>
-						<option data-filter-value=".SSTRANS">Subsecretaría de Transporte</option>
-						<option data-filter-value=".SECG">Secretaría General</option>
-						<option data-filter-value=".MMGC">Ministerio de Modernización</option>
-					</select>
 
 					<select class="filter option-set" data-filter-group="eje">
 						<option data-filter-value="" selected="selected">Ver todos los ejes</option>
@@ -135,18 +125,6 @@
 							{{#if cells.DGCode}}
 							<span class="colaboracion principal">{{cells.DGCode}}</span>
 							{{/if}}
-							{{#if cells.DGCodeColab1}}
-							<span class="colaboracion">{{cells.DGCodeColab1}}</span>
-							{{/if}}
-							{{#if cells.DGCodeColab2}}
-							<span class="colaboracion">{{cells.DGCodeColab2}}</span>
-							{{/if}}
-							{{#if cells.DGCodeColab3}}
-							<span class="colaboracion">{{cells.DGCodeColab3}}</span>
-							{{/if}}
-							{{#if cells.DGCodeColab4}}
-							<span class="colaboracion">{{cells.DGCodeColab4}}</span>
-							{{/if}}
 
 						<p class="number">{{cells.Prioridad}}</p>
 						<p class="ministerioCode">{{cells.MinisterioCode}}</p>
@@ -156,123 +134,8 @@
 			</div>
 		</section>
 
-		<div id="slides-container">
-			<script id="slides-template" type="text/x-handlebars-template">
-				{{#if cells.Orden}}
-
-				<section class="slides {{cells.EjeCode}}" id="slide{{cells.NombreLink}}" data-proyecto="{{cells.NombreLink}}" data-eje="{{cells.Eje}}" data-scroll-index="{{position-proyectos}}">
-
-				<section class="inicio">
-				<h1>{{cells.Proyecto}}</h1>
-				<h2>{{cells.Ministerio}}</h2>
-				</section>
-
-				{{#if cells.YouTube}}
-				<section class="slide-template contexto">
-				<iframe width="853" height="480" src="http://www.youtube.com/embed/{{cells.YouTube}}?rel=0" frameborder="0" allowfullscreen></iframe>
-				</section>
-				{{/if}}
-
-				{{#if cells.Contexto}}
-				<section class="slide-template contexto">
-				<h1>Contexto</h1>
-				<h2>{{cells.Contexto}}</h2>
-				</section>
-				{{/if}}
-
-				{{#if cells.ImgContexto}}
-				<section class="slide-template slide-imagen">
-				<img src="{{cells.ImgContexto}}"/> <!-- Original 1900 x 1069 -->
-				</section>
-				{{/if}}
-
-				{{#if cells.Objetivo}}
-				<section class="slide-template objetivo">
-				<h1>Objetivo</h1>
-				<h2>{{cells.Objetivo}}</h2>
-				</section>
-				{{/if}}
-
-				{{#if cells.ImgObjetivo}}
-				<section class="slide-template slide-imagen">
-				<img src="{{cells.ImgObjetivo}}"/>
-				</section>
-				{{/if}}
-
-				{{#if cells.Meta}}
-				<section class="slide-template meta">
-				<h1>Meta</h1>
-				<h2>{{cells.Meta}}</h2>
-				</section>
-				{{/if}}
-
-				{{#if cells.Img01}}
-				<section class="slide-template slide-imagen">
-				<img src="{{cells.Img01}}"/>
-				</section>
-				{{/if}}
-				{{#if cells.Img02}}
-				<section class="slide-template slide-imagen">
-				<img src="{{cells.Img02}}"/>
-				</section>
-				{{/if}}
-				{{#if cells.Img03}}
-				<section class="slide-template slide-imagen">
-				<img src="{{cells.Img03}}"/>
-				</section>
-				{{/if}}
-				{{#if cells.Img04}}
-				<section class="slide-template slide-imagen">
-				<img src="{{cells.Img04}}"/>
-				</section>
-				{{/if}}
-				</section>
-
-				{{/if}}
-			</script>
-
-
-		</div>
-
-
 
 		
-		
-
-<section class="video">
-    <h1>Video</h1>
-    <video id="fis" class="video-js vjs-default-skin" controls preload="auto" width="50%" height="50%" poster="video/fis.png">
-		<source src="video/fis.mp4" type='video/mp4' />
-	</video>
-</section>
-
-<section class="slide-imagen">
-	<img src="img/slides/ba_evoluciona_11.jpg"/>
-</section>
-
-<section class="slide-imagen">
-	<img src="img/slides/ba_evoluciona_12.jpg"/>
-</section>
-
-<section class="slide-imagen">
-	<img src="img/slides/ba_evoluciona_13.jpg"/>
-</section>
-
-<section class="slide-imagen">
-	<img src="img/slides/ba_evoluciona_14.jpg"/>
-</section>
-
-
-		
-<section class="slide-calendario">
-	<h1>Calendario de Eventos 2014</h1>
-	<div class="calendario"> </div>
-</section>
-
-<section class="slide-imagen">
-	<img src="img/bahackaton-verde.jpg"/>
-</section>
-
 		<footer>
 
 			<div class="volver">
@@ -281,12 +144,8 @@
 			<div class="volver">
 				<a href="#Dashboard" onclick="$('.dashboard').animatescroll({scrollSpeed:1000,easing:'easeInOutQuint'});">Dashboard</a>
 			</div>
-			<div class="volver">
-				<a href="#Calendario" onclick="$('.slide-calendario').animatescroll({scrollSpeed:1000,easing:'easeInOutQuint'});">Calendario</a>
-			</div>
 		</footer>
 
-		<!-- onclick="$('body').animatescroll({scrollSpeed:1000,easing:'easeInOutQuint'}); -->
 
 		<script src="js/jquery-1.10.2.min.js"></script>
 		<script src="js/jquery.sheetrock.min.js"></script>

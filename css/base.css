@@ -361,6 +361,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
+  transition: background 0.5s linear;
   -webkit-font-smoothing: antialiased; }
   @media only screen and (min-width: 20em) and (max-width: 30em) {
     body {

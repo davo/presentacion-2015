@@ -472,7 +472,6 @@ footer {
           transition: none;
 }
 
-
 /**** Base styles ****/
 
 body {
@@ -486,6 +485,8 @@ body {
     background-repeat: no-repeat;
     background-attachment:fixed;
     background-position:center;
+    transition: background 0.5s linear;
+
 
     -webkit-font-smoothing: antialiased;
 

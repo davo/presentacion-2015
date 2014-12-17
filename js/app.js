@@ -183,7 +183,7 @@ $('#slides-container').sheetrock({
 	rowHandler : slidesTemplate,
 	rowGroups : false,
 	userCallback : function() {
-		crearGantts();
+		console.log('Cargo proyectos')
 	}
 });
 
@@ -199,4 +199,10 @@ $('#odd').on('change', function () {
 		});
 	}
 
+});
+
+$(document).ready(function() {
+    $('#pagepiling').pagepiling({
+        sectionSelector: 'section',
+    });
 });

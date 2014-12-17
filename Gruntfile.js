@@ -1,85 +1,48 @@
-/* global module:false */
-module.exports = function(grunt) {
-	var port = grunt.option('port') || 8000;
-	// Project configuration
-	grunt.initConfig({
-		pkg: grunt.file.readJSON('package.json'),
-		meta: {
-			banner:
-				'/*!\n' +
-				' * reveal.js <%= pkg.version %> (<%= grunt.template.today("yyyy-mm-dd, HH:MM") %>)\n' +
-				' * http://lab.hakim.se/reveal-js\n' +
-				' * MIT licensed\n' +
-				' *\n' +
-				' * Copyright (C) 2013 Hakim El Hattab, http://hakim.se\n' +
-				' */'
-		},
+'use strict';
+module.exports = function (grunt) {
+    grunt.initConfig({
+        pkg: grunt.file.readJSON('package.json'),
+        sass: {
+            dist: {
+                files: {
+                    'css/base.css': 'css/base.scss'
+                }
+            }
+        },
+        watch: {
+            css: {
+                files: '**/*.scss',
+                tasks: ['sass']
+            },
+            options: {
+                livereload: true
+            }
+        },
+        cssmin: {
+            css:{
+                src: 'css/base.css',
+                dest: 'css/base.min.css'
+            }
+        },
 
-		uglify: {
-			options: {
-				banner: '<%= meta.banner %>\n'
-			},
-			build: {
-				src: 'js/reveal.js',
-				dest: 'js/reveal.min.js'
-			}
-		},
+        uglify: {
+            my_target: {
+              files: {
+                'js/presupuesto.min.js': ['js/presupuesto.js']
+              }
+            }
+        }
 
-		cssmin: {
-			compress: {
-				files: {
-					'css/style-edit.min.css': [ 'css/style-edit.css' ]
-				}
-			}
-		},
-
-		sass: {
-			main: {
-				files: {
-					'css/style-edit.css': 'css/style-edit.scss'
-				}
-			}
-		},
+    });
 
 
-		connect: {
-			server: {
-				options: {
-					port: port,
-					base: '.'
-				}
-			}
-		},
+    //Register modules to user    
+    grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
 
-
-		watch: {
-			main: {
-				files: [ 'Gruntfile.js', 'js/reveal.js', 'css/reveal.css' ],
-				tasks: 'default'
-			},
-			styles: {
-				files: [ 'css/*.scss'],
-				tasks: 'style'
-			}
-		}
-
-	});
-
-	// Dependencies
-	grunt.loadNpmTasks( 'grunt-contrib-cssmin' );
-	grunt.loadNpmTasks( 'grunt-contrib-watch' );
-	grunt.loadNpmTasks( 'grunt-contrib-sass' );
-
-	// Default task
-	grunt.registerTask( 'default', [ 'jshint', 'cssmin' ] );
-
-	// Theme task
-	grunt.registerTask( 'style', [ 'sass' ] );
-
-	// Serve presentation locally
-	grunt.registerTask( 'serve', [ 'connect', 'watch' ] );
-
-	// Run tests
-	// grunt.registerTask( 'test', [ 'jshint', 'qunit' ] );
-
+    //Register tasks
+    grunt.registerTask('default', ['watch']);
+    grunt.registerTask('deploy', ['cssmin', 'uglify']);
 };

@@ -142,7 +142,9 @@ function makeIsotope() {
 
 
 // Defino URL del spreadsheet.
-var proyectos = 'https://docs.google.com/spreadsheet/ccc?key=0Ajow-y98mTC4dEo0ZUxub3JvVEdSelpadF9KcGRQYWc#gid=5';
+
+
+var proyectos = 'https://docs.google.com/spreadsheet/ccc?key=0Ajow-y98mTC4dDluVElZN0cyX25ST0tFQTdUcm5OaEE&usp=sharing_eid#gid=3';
 
 // Compilo plantilla de Handlebars template para los objetos del dashboard.
 var HRTemplate = Handlebars.compile($('#hr-template').html());
@@ -201,8 +203,8 @@ $('#odd').on('change', function () {
 
 });
 
-$(document).ready(function() {
-    $('#pagepiling').pagepiling({
-        sectionSelector: 'section',
-    });
-});
+// $(document).ready(function() {
+//     $('#pagepiling').pagepiling({
+//         sectionSelector: 'section',
+//     });
+// });

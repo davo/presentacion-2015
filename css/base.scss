@@ -2,14 +2,14 @@
 @import 'breakpoints';
 
 
-$EEC-hex: #69D2E7;
-$EEC-hsla: hsla(190, 72%, 20%, .8);
-$ES21-hex: #E45635;
-$ES21-hsla: hsla(11, 76%, 20%, .8);
-$CI-hex: #F7BC05;
-$CI-hsla: hsla(45, 96%, 20%, .8);
-$IPI-hex: #327CCB;
-$IPI-hsla: hsla(211, 60%, 20%, .8);
+$AD-hex: #69D2E7;
+$AD-hsla: hsla(190, 72%, 20%, .8);
+$LD-hex: #E45635;
+$LD-hsla: hsla(11, 76%, 20%, .8);
+$IA-hex: #F7BC05;
+$IA-hsla: hsla(45, 96%, 20%, .8);
+$NT-hex: #327CCB;
+$NT-hsla: hsla(211, 60%, 20%, .8);
 $BAM-hex: #44AA55;
 $BAM-hsla: hsla(130, 43%, 20%, .8);
 
@@ -324,18 +324,18 @@ footer {
     margin-left: 60px;
 
   }
-  .EEC {
+  .AD {
     height: 135px;
     padding-top: 65px;
     background-color: hsla(190, 72%, 66%, .8);
   }
-  .ES21 {
+  .LD {
       background-color: hsla(11, 76%, 55%, .8);
   }
-  .CI {
+  .IA {
       background-color: hsla(45, 96%, 49%, .8);
   }
-  .IPI {
+  .NT {
       background-color: hsla(211, 60%, 50%, .8);
   }
   .BAM {
@@ -369,16 +369,16 @@ footer {
     font-weight: 200;
   }
   
-  .EEC {
+  .AD {
     @include linear-gradient(top, hsla(190, 72%, 20%, 0) 0%, hsla(190, 72%, 20%, .8) 100%);
   }
-  .ES21 {
+  .LD {
     @include linear-gradient(top, hsla(11, 76%, 55%, 0) 0%, hsla(11, 76%, 55%, .8) 100%); 
   }
-  .CI {
+  .IA {
     @include linear-gradient(top, hsla(45, 96%, 49%, 0) 0%, hsla(45, 96%, 49%, .8) 100%);
   }
-  .IPI {
+  .NT {
     @include linear-gradient(top, hsla(211, 60%, 50%, 0) 0%, hsla(211, 60%, 50%, .8) 100%);
   }
   .BAM {
@@ -1279,22 +1279,22 @@ PBAAM
          -o-transition-duration: 0.1s;
             transition-duration: 0.1s;
 }
-.element.EEC, .element.clickable.EEC {
+.element.AD, .element.clickable.AD {
     border-color: #69D2E7;
     border-color: hsla(190, 72%, 20%, 1);
     background-color: hsla(190, 72%, 66%, .8);
 }
-.element.ES21, .element.clickable.ES21 {
+.element.LD, .element.clickable.LD {
     border-color: #E45635;
     border-color: hsla(11, 76%, 20%, 1);
     background-color: hsla(11, 76%, 55%, .8);
 }
-.element.CI, .element.clickable.CI {
+.element.IA, .element.clickable.IA {
     border-color: #F7BC05;
     border-color: hsla(45, 96%, 20%, 1);
     background-color: hsla(45, 96%, 49%, .8);
 }
-.element.IPI, .element.clickable.IPI {
+.element.NT, .element.clickable.NT {
     border-color: #327CCB;
     border-color: hsla(211, 60%, 20%, 1);
     background-color: hsla(211, 60%, 50%, .8);

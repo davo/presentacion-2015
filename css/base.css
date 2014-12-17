@@ -354,8 +354,8 @@ body {
   font-family: "Open Sans", "Helvetica Neue", "Helvetica", sans-serif;
   font-size: 13px;
   line-height: 1.7em;
-  background: #fff;
   color: #000;
+  background-color: #fafafa;
   background-size: cover;
   background-image: url(../img/buenosaires-dos.jpg);
   background-repeat: no-repeat;
@@ -375,6 +375,24 @@ body {
   @media only screen and (min-width: 68.75em) {
     body {
       zoom: 1; } }
+
+.background0 {
+  background-image: url(../img/buenosaires-dos.jpg); }
+
+.background1 {
+  background-image: url(../img/planetario.jpg); }
+
+.background3 {
+  background-image: url(../img/buenosaires-dos.jpg); }
+
+.background4 {
+  background-image: url(../img/planetario.jpg); }
+
+.background5 {
+  background-image: url(../img/buenosaires-dos.jpg); }
+
+.background6 {
+  background-image: url(../img/planetario.jpg); }
 
 h1, h2, h3, p, ul, ol, pre, dl {
   /*margin-bottom: 1.0em;*/ }

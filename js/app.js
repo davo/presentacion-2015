@@ -132,17 +132,7 @@ function makeIsotope() {
 
 }
 
-/*
-
- Esto no funciona, la idea es que al llegar a un lugar donde el color
- de la tipografía en el header no se lee, via Waypoints invertir el
- color, cambiando de clase.
-
- */
-
-
 // Defino URL del spreadsheet.
-
 
 var proyectos = 'https://docs.google.com/spreadsheet/ccc?key=0Ajow-y98mTC4dDluVElZN0cyX25ST0tFQTdUcm5OaEE&usp=sharing_eid#gid=3';
 
@@ -208,3 +198,4 @@ $('#odd').on('change', function () {
 //         sectionSelector: 'section',
 //     });
 // });
+

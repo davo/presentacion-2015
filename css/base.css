@@ -1,12 +1,11 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700);
 :focus {
   outline: 0; }
 
 /*------------------------------------*\
     RESET
 \*------------------------------------*/
-/* http://meyerweb.com/eric/tools/css/reset/ 
-    v2.0b1 | 201101 
+/* http://meyerweb.com/eric/tools/css/reset/
+    v2.0b1 | 201101
     NOTE:WORK IN PROGRESS
     USE WITH CAUTION AND TEST WITH ABANDON */
 * {
@@ -48,7 +47,7 @@ q:before, q:after {
   content: '';
   content: none; }
 
-/* remember to define visible focus styles! 
+/* remember to define visible focus styles!
 :focus{
     outline:?????;
 } */
@@ -92,7 +91,7 @@ table {
     position: absolute;
     top: 20px;
     left: 20px;
-    width: 200px;
+    width: 250px;
     background: url(../img/logo-invertido-2x.png) no-repeat;
     background-size: 35px 41px;
     display: block;
@@ -172,7 +171,6 @@ footer {
 .header {
   display: block;
   color: #fff;
-  margin-left: 100px;
   text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.7); }
   .header h1 {
     padding-top: 500px;
@@ -351,7 +349,6 @@ footer {
 
 /**** Base styles ****/
 body {
-  font-family: "Open Sans", "Helvetica Neue", "Helvetica", sans-serif;
   font-size: 13px;
   line-height: 1.7em;
   color: #000;
@@ -363,18 +360,6 @@ body {
   background-position: center;
   transition: background 0.5s linear;
   -webkit-font-smoothing: antialiased; }
-  @media only screen and (min-width: 20em) and (max-width: 30em) {
-    body {
-      zoom: .5; } }
-  @media only screen and (min-width: 30em) and (max-width: 56.25em) {
-    body {
-      zoom: .7; } }
-  @media only screen and (min-width: 56.25em) {
-    body {
-      zoom: .8; } }
-  @media only screen and (min-width: 68.75em) {
-    body {
-      zoom: 1; } }
 
 .background0 {
   background-image: url(../img/buenosaires-dos.jpg); }
@@ -446,15 +431,13 @@ blockquote {
   font-style: italic; }
 
 section {
-  width: 100%;
-  padding: 0 7%;
+  width: auto;
   display: table;
   margin: 0;
   max-width: none;
   height: 100vh; }
 
 section.dashboard {
-  zoom: 1;
   padding-top: 1px; }
 
 /**** Isotope styles ****/
@@ -640,7 +623,6 @@ body {
   right: 0px;
   margin-top: -50px;
   margin-right: 5px;
-  zoom: 1.3;
   font-size: 1.2em; }
 
 #options h3 {
@@ -755,7 +737,6 @@ body {
   width: 100%; }
 
 #content {
-  zoom: .8;
   padding-bottom: 250px; }
 
 .demos #content {
@@ -1089,7 +1070,7 @@ code .nd {
 .clearfix {
   zoom: 1; }
 
-/* Codificacion de color para cada eje 
+/* Codificacion de color para cada eje
 
 PBAAM
 

@@ -1,17 +1,23 @@
 @import '../components/bourbon/dist/bourbon';
 @import 'breakpoints';
 
+/*------------------------------------*\
+    $MAIN
+\*------------------------------------*/
+/* GO! */
 
-$AD-hex: #69D2E7;
-$AD-hsla: hsla(190, 72%, 20%, .8);
-$LD-hex: #E45635;
-$LD-hsla: hsla(11, 76%, 20%, .8);
-$IA-hex: #F7BC05;
-$IA-hsla: hsla(45, 96%, 20%, .8);
-$NT-hex: #327CCB;
-$NT-hsla: hsla(211, 60%, 20%, .8);
-$BAM-hex: #44AA55;
-$BAM-hsla: hsla(130, 43%, 20%, .8);
+
+@include font-face(Gotham, '../lib/font/gotham');
+@include font-face(Decima Mono, '../lib/font/decimamono-bold-webfont');
+
+$AD-hex: #00B7F1;
+$AD-hsla: hsla(194, 100%, 47%, 0.8);
+$LD-hex: #18DDD6;
+$LD-hsla: hsla(178, 80%, 48%, 0.8);
+$IA-hex: #6E18DD;
+$IA-hsla: hsla(266, 80%, 48%, 0.8);
+$NT-hex: #1856dd;
+$NT-hsla: hsla(221, 80%, 48%, 0.8);
 
 :focus {
 outline: 0;
@@ -90,24 +96,7 @@ table{
 
 
 
-/*------------------------------------*\
-    $MAIN
-\*------------------------------------*/
-/* GO! */
 
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700);
-
-@font-face {
-    font-family: 'Gotham';
-    src: url('../lib/font/gotham.eot');
-    src: url('../lib/font/gotham.eot?#iefix') format('embedded-opentype'),
-         url('../lib/font/gotham.woff') format('woff'),
-         url('../lib/font/gotham.ttf') format('truetype'),
-         url('../lib/font/gotham.svg#Gotham-Medium') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
 
 /* Start: Recommended Isotope styles */
 
@@ -132,7 +121,7 @@ table{
       position: absolute;
       top: 20px;
       left: 20px;
-      width: 200px;
+      width: 250px;
       background: url(../img/logo-invertido-2x.png) no-repeat;
       background-size: 35px 41px;
       display: block;
@@ -381,9 +370,6 @@ footer {
   .NT {
     @include linear-gradient(top, hsla(211, 60%, 50%, 0) 0%, hsla(211, 60%, 50%, .8) 100%);
   }
-  .BAM {
-    @include linear-gradient(top, hsla(130, 43%, 47%, 0) 0%, hsla(130, 43%, 47%, .8) 100%);
-  }
 
 }
 
@@ -476,17 +462,11 @@ footer {
 /**** Base styles ****/
 
 body {
-    font-family: "Open Sans", "Helvetica Neue", "Helvetica", sans-serif;
+    font-family: "Gotham","Open Sans", "Helvetica Neue", "Helvetica", sans-serif;
     font-size: 13px;
     line-height: 1.7em;
     background: #fff;
     color: #000;
-    background-size: cover;
-    background-image: url(../img/buenosaires-dos.jpg);
-    background-repeat: no-repeat;
-    background-attachment:fixed;
-    background-position:center;
-
     -webkit-font-smoothing: antialiased;
 
     @include breakpoint(smartphone) {
@@ -516,8 +496,12 @@ h1, h2, h3, p, ul, ol, pre, dl {
 
 h1, h2, #super-list, .element, .tagline, #index-list, 
 .super-list .link {
-  font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Decima Mono", "Helvetica Neue", Arial, sans-serif;
   font-weight: 300;
+}
+.element, .tagline, #index-list, 
+.super-list .link {
+  font-family: "Helvetica Neue", Arial, sans-serif;
 }
 
 h1, h2, h3 { font-weight: normal; }
@@ -567,11 +551,23 @@ blockquote {
 
 section {
   width: 100%;
-  padding: 0 7%;
+  padding: 0;
   display: table;
   margin: 0;
   max-width: none;
   height: 100vh;
+
+  .slide-01 {
+
+  }
+
+  img {
+    min-height: 100%;
+    min-width: 1024px;
+
+    width: 100%;
+    height: auto;
+  }
 }
 
 section.dashboard {
@@ -605,19 +601,6 @@ body {
   -moz-border-radius: 1.2em;
   border-radius: 1.2em;*/
 }
-
-
-.element.alkali          { background: #F00; background: hsl(   0, 100%, 50%); }
-.element.alkaline-earth  { background: #F80; background: hsl(  36, 100%, 50%); }
-.element.lanthanoid      { background: #FF0; background: hsl(  72, 100%, 50%); }
-.element.actinoid        { background: #0F0; background: hsl( 108, 100%, 50%); }
-.element.transition      { background: #0F8; background: hsl( 144, 100%, 50%); }
-.element.post-transition { background: #0FF; background: hsl( 180, 100%, 50%); }
-.element.metalloid       { background: #08F; background: hsl( 216, 100%, 50%); }
-.element.other.nonmetal  { background: #00F; background: hsl( 252, 100%, 50%); }
-.element.halogen         { background: #F0F; background: hsl( 288, 100%, 50%); }
-.element.noble-gas       { background: #F08; background: hsl( 324, 100%, 50%); }
-
 
 .element * {
   position: absolute;
@@ -697,24 +680,21 @@ body {
 
 .A {
   width: 510px;
-}
-
-.A .proyecto  {
-  font-size: 2.3em;
-  line-height: 0.9em;
-}
-
-.A .name {
-  font-size: 1.5em;
-  bottom: 1em;
-}
-
-.A .number {
-  font-size: 2em;
-  font-weight: bold;
-  color: hsla(0,0%,0%,.5);
-  right: 0.2em;
-  top: 0.2em;
+  .proyecto {
+    font-size: 2.1em;
+    line-height: 0.9em;
+  }
+  .name {
+    font-size: 1.5em;
+    bottom: 1em;
+  }
+  .number {
+    font-size: 2em;
+    font-weight: bold;
+    color: hsla(0, 0%, 0%, 0.5);
+    right: 0.2em;
+    top: 0.2em;
+  }
 }
 
 
@@ -731,20 +711,6 @@ body {
   z-index: 100;
 }
 
-.clickable .element:hover {
-  cursor: pointer;
-}
-
-.clickable .element:hover h3 {
-  text-shadow:
-    0 0 10px white,
-    0 0 10px white
-  ;
-}
-
-.clickable .element:hover h2 {
-  color: white;
-}
 
 /**** Example Options ****/
 
@@ -1238,11 +1204,11 @@ PBAAM
 
 .element.A {
     font-size: 1.4em !important;
-    height: 180px;
+    height: 150px;
 }
 .element.B {
     font-size: 1.2em !important;
-    height: 180px !important;
+    height: 150px !important;
 }
 .B .proyecto, .C .proyecto, .D .proyecto {
   top: .25em;
@@ -1259,11 +1225,11 @@ PBAAM
 
 .element.C {
     font-size: .8em !important;
-    height: 100px;
+    height: 60px;
 }
 .element.D {
-    font-size: .6em !important;
-    height: 65px;
+    font-size: .65em !important;
+    height: 60px;
 }
 .element {
   border-top: 0px solid;
@@ -1280,31 +1246,25 @@ PBAAM
             transition-duration: 0.1s;
 }
 .element.AD, .element.clickable.AD {
-    border-color: #69D2E7;
-    border-color: hsla(190, 72%, 20%, 1);
-    background-color: hsla(190, 72%, 66%, .8);
+    border-color: $AD-hex;
+    border-color: $AD-hsla;
+    background-color: $AD-hsla;
 }
 .element.LD, .element.clickable.LD {
-    border-color: #E45635;
-    border-color: hsla(11, 76%, 20%, 1);
-    background-color: hsla(11, 76%, 55%, .8);
+    border-color: $LD-hex;
+    border-color: $LD-hsla;
+    background-color: $LD-hsla;
 }
 .element.IA, .element.clickable.IA {
-    border-color: #F7BC05;
-    border-color: hsla(45, 96%, 20%, 1);
-    background-color: hsla(45, 96%, 49%, .8);
+    border-color: $IA-hex;
+    border-color: $IA-hsla;
+    background-color: $IA-hsla;
 }
 .element.NT, .element.clickable.NT {
-    border-color: #327CCB;
-    border-color: hsla(211, 60%, 20%, 1);
-    background-color: hsla(211, 60%, 50%, .8);
+    border-color: $NT-hex;
+    border-color: $NT-hsla;
+    background-color: $NT-hsla;
 }
-.element.BAM, .element.clickable.BAM {
-    border-color: #44AA55;
-    border-color: hsla(130, 43%, 20%, 1);
-    background-color: hsla(130, 43%, 47%, .8);
-}
-
 
 
 /*

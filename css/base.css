@@ -1,4 +1,19 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700);
+/*------------------------------------*\
+    $MAIN
+\*------------------------------------*/
+/* GO! */
+@font-face {
+  font-family: Gotham;
+  font-weight: normal;
+  font-style: normal;
+  src: url("../lib/font/gotham.eot");
+  src: url("../lib/font/gotham.eot?#iefix") format("embedded-opentype"), url("../lib/font/gotham.woff") format("woff"), url("../lib/font/gotham.ttf") format("truetype"), url("../lib/font/gotham.svg#Gotham") format("svg"); }
+@font-face {
+  font-family: Decima Mono;
+  font-weight: normal;
+  font-style: normal;
+  src: url("../lib/font/decimamono-bold-webfont.eot");
+  src: url("../lib/font/decimamono-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../lib/font/decimamono-bold-webfont.woff") format("woff"), url("../lib/font/decimamono-bold-webfont.ttf") format("truetype"), url("../lib/font/decimamono-bold-webfont.svg#Decima Mono") format("svg"); }
 :focus {
   outline: 0; }
 
@@ -63,16 +78,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-/*------------------------------------*\
-    $MAIN
-\*------------------------------------*/
-/* GO! */
-@font-face {
-  font-family: 'Gotham';
-  src: url("../lib/font/gotham.eot");
-  src: url("../lib/font/gotham.eot?#iefix") format("embedded-opentype"), url("../lib/font/gotham.woff") format("woff"), url("../lib/font/gotham.ttf") format("truetype"), url("../lib/font/gotham.svg#Gotham-Medium") format("svg");
-  font-weight: normal;
-  font-style: normal; }
 /* Start: Recommended Isotope styles */
 /*********************************************
  * LOGO
@@ -92,7 +97,7 @@ table {
     position: absolute;
     top: 20px;
     left: 20px;
-    width: 200px;
+    width: 250px;
     background: url(../img/logo-invertido-2x.png) no-repeat;
     background-size: 35px 41px;
     display: block;
@@ -294,10 +299,6 @@ footer {
     background-color: rgba(51, 125, 204, 0);
     background-image: -webkit-linear-gradient(top, rgba(51, 125, 204, 0) 0%, rgba(51, 125, 204, 0.8) 100%);
     background-image: linear-gradient(to bottom,rgba(51, 125, 204, 0) 0%, rgba(51, 125, 204, 0.8) 100%); }
-  .ejes-descripcion .BAM {
-    background-color: rgba(68, 171, 85, 0);
-    background-image: -webkit-linear-gradient(top, rgba(68, 171, 85, 0) 0%, rgba(68, 171, 85, 0.8) 100%);
-    background-image: linear-gradient(to bottom,rgba(68, 171, 85, 0) 0%, rgba(68, 171, 85, 0.8) 100%); }
 
 /**** Isotope Filtering ****/
 .isotope-item {
@@ -351,16 +352,11 @@ footer {
 
 /**** Base styles ****/
 body {
-  font-family: "Open Sans", "Helvetica Neue", "Helvetica", sans-serif;
+  font-family: "Gotham","Open Sans", "Helvetica Neue", "Helvetica", sans-serif;
   font-size: 13px;
   line-height: 1.7em;
   background: #fff;
   color: #000;
-  background-size: cover;
-  background-image: url(../img/buenosaires-dos.jpg);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
   -webkit-font-smoothing: antialiased; }
   @media only screen and (min-width: 20em) and (max-width: 30em) {
     body {
@@ -380,8 +376,12 @@ h1, h2, h3, p, ul, ol, pre, dl {
 
 h1, h2, #super-list, .element, .tagline, #index-list,
 .super-list .link {
-  font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Decima Mono", "Helvetica Neue", Arial, sans-serif;
   font-weight: 300; }
+
+.element, .tagline, #index-list,
+.super-list .link {
+  font-family: "Helvetica Neue", Arial, sans-serif; }
 
 h1, h2, h3 {
   font-weight: normal; }
@@ -428,11 +428,16 @@ blockquote {
 
 section {
   width: 100%;
-  padding: 0 7%;
+  padding: 0;
   display: table;
   margin: 0;
   max-width: none;
   height: 100vh; }
+  section img {
+    min-height: 100%;
+    min-width: 1024px;
+    width: 100%;
+    height: auto; }
 
 section.dashboard {
   zoom: 1;
@@ -460,46 +465,6 @@ body {
   /*  -webkit-border-radius: 1.2em;
     -moz-border-radius: 1.2em;
     border-radius: 1.2em;*/ }
-
-.element.alkali {
-  background: #F00;
-  background: red; }
-
-.element.alkaline-earth {
-  background: #F80;
-  background: #ff9900; }
-
-.element.lanthanoid {
-  background: #FF0;
-  background: #ccff00; }
-
-.element.actinoid {
-  background: #0F0;
-  background: #33ff00; }
-
-.element.transition {
-  background: #0F8;
-  background: #00ff66; }
-
-.element.post-transition {
-  background: #0FF;
-  background: cyan; }
-
-.element.metalloid {
-  background: #08F;
-  background: #0066ff; }
-
-.element.other.nonmetal {
-  background: #00F;
-  background: #3300ff; }
-
-.element.halogen {
-  background: #F0F;
-  background: #cc00ff; }
-
-.element.noble-gas {
-  background: #F08;
-  background: #ff0099; }
 
 .element * {
   position: absolute;
@@ -576,21 +541,18 @@ body {
 
 .A {
   width: 510px; }
-
-.A .proyecto {
-  font-size: 2.3em;
-  line-height: 0.9em; }
-
-.A .name {
-  font-size: 1.5em;
-  bottom: 1em; }
-
-.A .number {
-  font-size: 2em;
-  font-weight: bold;
-  color: rgba(0, 0, 0, 0.5);
-  right: 0.2em;
-  top: 0.2em; }
+  .A .proyecto {
+    font-size: 2.1em;
+    line-height: 0.9em; }
+  .A .name {
+    font-size: 1.5em;
+    bottom: 1em; }
+  .A .number {
+    font-size: 2em;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.5);
+    right: 0.2em;
+    top: 0.2em; }
 
 .variable-sizes .element.width2.height2 {
   font-size: 2.0em; }
@@ -602,15 +564,6 @@ body {
   width: 350px;
   height: 350px;
   z-index: 100; }
-
-.clickable .element:hover {
-  cursor: pointer; }
-
-.clickable .element:hover h3 {
-  text-shadow: 0 0 10px white, 0 0 10px white; }
-
-.clickable .element:hover h2 {
-  color: white; }
 
 /**** Example Options ****/
 #options {
@@ -1079,11 +1032,11 @@ PBAAM
 */
 .element.A {
   font-size: 1.4em !important;
-  height: 180px; }
+  height: 150px; }
 
 .element.B {
   font-size: 1.2em !important;
-  height: 180px !important; }
+  height: 150px !important; }
 
 .B .proyecto, .C .proyecto, .D .proyecto {
   top: .25em;
@@ -1097,11 +1050,11 @@ PBAAM
 
 .element.C {
   font-size: .8em !important;
-  height: 100px; }
+  height: 60px; }
 
 .element.D {
-  font-size: .6em !important;
-  height: 65px; }
+  font-size: .65em !important;
+  height: 60px; }
 
 .element {
   border-top: 0px solid; }
@@ -1118,29 +1071,24 @@ PBAAM
   transition-duration: 0.1s; }
 
 .element.AD, .element.clickable.AD {
-  border-color: #69D2E7;
-  border-color: #0e4b58;
-  background-color: rgba(106, 210, 231, 0.8); }
+  border-color: #00b7f1;
+  border-color: rgba(0, 184, 240, 0.8);
+  background-color: rgba(0, 184, 240, 0.8); }
 
 .element.LD, .element.clickable.LD {
-  border-color: #E45635;
-  border-color: #5a1a0c;
-  background-color: rgba(227, 85, 53, 0.8); }
+  border-color: #18ddd6;
+  border-color: rgba(24, 220, 214, 0.8);
+  background-color: rgba(24, 220, 214, 0.8); }
 
 .element.IA, .element.clickable.IA {
-  border-color: #F7BC05;
-  border-color: #644b02;
-  background-color: rgba(245, 185, 5, 0.8); }
+  border-color: #6e18dd;
+  border-color: rgba(109, 24, 220, 0.8);
+  background-color: rgba(109, 24, 220, 0.8); }
 
 .element.NT, .element.clickable.NT {
-  border-color: #327CCB;
-  border-color: #143252;
-  background-color: rgba(51, 125, 204, 0.8); }
-
-.element.BAM, .element.clickable.BAM {
-  border-color: #44AA55;
-  border-color: #1d4924;
-  background-color: rgba(68, 171, 85, 0.8); }
+  border-color: #1856dd;
+  border-color: rgba(24, 86, 220, 0.8);
+  background-color: rgba(24, 86, 220, 0.8); }
 
 /*
 

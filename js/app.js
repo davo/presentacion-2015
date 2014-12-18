@@ -1,7 +1,6 @@
 // Maneja play pause video
 $(document).ready(function() {
     $('#pagepiling').pagepiling();
-    $(document).on('scroll', checkMedia);
 });
 
 /*

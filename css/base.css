@@ -842,6 +842,8 @@ body {
   width: 100%; }
 
 #content {
+  zoom: .8;
+  min-height: 1080px;
   padding-bottom: 250px; }
 
 /**** Docs ****/

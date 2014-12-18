@@ -428,7 +428,18 @@ section {
   display: table;
   margin: 0;
   max-width: none;
-  height: 100vh; }
+  height: 100vh;
+  position: relative; }
+  section video {
+    position: absolute;
+    left: 0px;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    background-size: cover; }
   section.fondo-geo-gradiente {
     background-image: url("../img/geo.png") no-repeat center center fixed;
     -webkit-background-size: cover;

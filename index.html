@@ -19,7 +19,14 @@
 		</nav>
 
 		<section>
+<<<<<<< HEAD
 			<img src="img/slide-01-labgcba-01.png" alt="">
+=======
+            <video width="100%" loop muted class="video">    
+                <source src="video/21 - BA Digital - Cut.mp4" type="video/mp4" />    
+            </video>   
+			<img src="img/slide01-labgcba-01.png" alt="">
+>>>>>>> 51cdad3737d2d3d9e17dc89b040bbce954ed68d8
 		</section>
 		<section>
 			<img src="img/slide-02-contexto-internacional.jpg" alt="">
@@ -91,9 +98,15 @@
 			</div>
 		</section>
 
+<<<<<<< HEAD
 		<section>
 			<h1>Apertura de datos</h1>
 		</section>
+=======
+
+
+
+>>>>>>> 51cdad3737d2d3d9e17dc89b040bbce954ed68d8
 		
 		<footer>
 
@@ -112,6 +125,35 @@
 		<script src="js/handlebars.min.js"></script>
 		<script src="js/jquery.isotope.min.js"></script>
 		<script src="js/app.js"></script>
+		<script>
+		  $(document).ready(function() {
+	            // Get media - with autoplay disabled (audio or video)
+	            var media = $('video').not("[autoplay='autoplay']");
+	            var tolerancePixel = 40;
+
+	            function checkMedia(){
+	                // Get current browser top and bottom
+	                var scrollTop = $(window).scrollTop() + tolerancePixel;
+	                var scrollBottom = $(window).scrollTop() + $(window).height() - tolerancePixel;
+
+	                //if ($(window).scrollTop() > $(window).height() - 10) {
+	                media.each(function(index, el) {
+	                    var yTopMedia = $(this).offset().top;
+	                    var yBottomMedia = $(this).height() + yTopMedia;
+
+	                    if(scrollTop < yBottomMedia && scrollBottom > yTopMedia){
+	                        $(this).get(0).play();
+	                    } else {
+	                        $(this).get(0).pause();
+	                    }
+	                });
+
+	                //}
+	            }
+	            $(document).on('scroll', checkMedia);
+	        });
+
+   		</script>
 
 	</body>
 </html>

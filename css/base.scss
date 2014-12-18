@@ -554,6 +554,19 @@ section {
   margin: 0;
   max-width: none;
   height: 100vh;
+  position: relative;
+
+  video { 
+    position: absolute;
+    left: 0px;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    background-size: cover; 
+  }
 
   &.fondo-geo-gradiente {
     background-image: url('../img/geo.png') no-repeat center center fixed; 

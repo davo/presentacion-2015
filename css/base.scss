@@ -569,12 +569,12 @@ section {
   }
 
   &.fondo-geo-gradiente {
-    background-image: url('../img/geo.png') no-repeat center center fixed; 
+    background-repeat: no-repeat; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    @include background(linear-gradient(#F9F9F9, #D7D8DA) left repeat);
+    @include background(url('../img/geo.png'), linear-gradient(#F9F9F9, #D7D8DA) left repeat);
 
   }
 
@@ -595,13 +595,31 @@ section {
   }
 
   li {
+    font-size: 1.5em;
     float: left;
-    width: 150px;
-    border: 1px solid red;
+    width: 25%;
     text-align: center;
-  }
-
-  .slide-01 {
+    text-transform: uppercase;
+    
+    span {
+      display: block;
+      margin: 0 auto;
+      width: 196px;
+      height: 197px;
+      background: url('../img/iconos.png') no-repeat;
+      &.ld {
+        background-position: -588px 0px;
+      }
+      &.ad {
+        background-position: 0px 0px;
+      }
+      &.nt {
+        background-position: -196px 0px;
+      }
+      &.ia {
+        background-position: -392px 0px;
+      }
+    }
 
   }
 

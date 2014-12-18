@@ -1,6 +1,11 @@
 // Maneja play pause video
 $(document).ready(function() {
     $('#pagepiling').pagepiling();
+
+    var videos = $("video");
+    // for (var i = 0; i < videos.length; i++){
+    // 	videos[i].play();
+    // }
 });
 
 /*

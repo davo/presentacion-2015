@@ -218,183 +218,6 @@ footer {
 }
 
 
-
-.header {
-  display: block;
-  color: #fff;
-  margin-left: 100px;
-  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.7);
-
-  h1 {
-    padding-top: 500px;
-    margin-left: 20px;
-    font-size: 5em;
-    line-height: 0em;
-    margin-bottom: 50px;
-    font-weight: 200;
-  }
-  h2 {
-    margin-left: 25px;
-    font-size: 1.6em;
-    font-weight: 200;
-  }
-}
-
-.institucional {
-  display: block;
-  color: #fff;
-  margin-left: 100px;
-  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.7);
-
-  h1 {
-    padding-top: 450px;
-    font-size: 5em;
-    line-height: 1em;
-    margin-bottom: 30px;
-    font-weight: 200;
-  }
-
-  h2 {
-    font-size: 3em;
-    font-weight: 200;
-  }
-  h3 {
-    padding-top: 450px;
-    font-size: 3em;
-    line-height: 1em;
-    margin-bottom: 50px;
-    font-weight: 200;
-  }
-  ul {
-    padding-left: 20px; 
-    list-style: disc;
-  }
-  li {
-    width: 70%;
-    font-size: 2.5em;
-    font-weight: 200;
-    line-height: 1.5em;
-    margin-bottom: 20px;
-  }
-}
-.ejes {
-  display: block;
-  color: #fff;
-  margin-left: 100px;
-  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.7);
-
-  h1 {
-    padding-top: 540px;
-    font-size: 5em;
-    line-height: 0em;
-    margin-bottom: 50px;
-    font-weight: 200;
-    float: left;
-  }
-  ul {
-    padding: 0;
-    margin: 0;
-  }
-  li {
-    margin-right: 10px; 
-    float: left;
-    font-size: 1.7em;
-    font-weight: 600;
-    letter-spacing: -.06em;
-    display: inline-block;
-    vertical-align: middle;
-    text-align: center;
-    width: 200px;
-    height: 120px;
-    padding-top: 80px;
-    margin-top: 450px;
-  }
-  li:first-child {
-    margin-left: 60px;
-
-  }
-  .AD {
-    height: 135px;
-    padding-top: 65px;
-    background-color: hsla(190, 72%, 66%, .8);
-  }
-  .LD {
-      background-color: hsla(11, 76%, 55%, .8);
-  }
-  .IA {
-      background-color: hsla(45, 96%, 49%, .8);
-  }
-  .NT {
-      background-color: hsla(211, 60%, 50%, .8);
-  }
-  .BAM {
-      background-color: hsla(130, 43%, 47%, .8);
-  }
-
-}
-.objetivos {
-  ul {
-    padding-top: 350px;
-  }
-}
-.ejes-descripcion {
-  display: block;
-  color: #fff;
-  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.7);
-
-  h1 {
-    padding-left: 100px;
-    padding-top: 540px;
-    font-size: 5em;
-    line-height: 0em;
-    margin-bottom: 50px;
-    font-weight: 200;
-  }
-
-  h2 {
-    width: 75%;
-    padding-left: 100px;
-    font-size: 3em;
-    font-weight: 200;
-  }
-  
-  .AD {
-    @include linear-gradient(top, hsla(190, 72%, 20%, 0) 0%, hsla(190, 72%, 20%, .8) 100%);
-  }
-  .LD {
-    @include linear-gradient(top, hsla(11, 76%, 55%, 0) 0%, hsla(11, 76%, 55%, .8) 100%); 
-  }
-  .IA {
-    @include linear-gradient(top, hsla(45, 96%, 49%, 0) 0%, hsla(45, 96%, 49%, .8) 100%);
-  }
-  .NT {
-    @include linear-gradient(top, hsla(211, 60%, 50%, 0) 0%, hsla(211, 60%, 50%, .8) 100%);
-  }
-
-}
-
-
-// .ejes {
-//   display: block;
-//   color: #fff;
-//   text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.7);
-
-//   h1 {
-//     padding-top: 200px;
-//     margin-left: 100px;
-//     font-size: 2.2em;
-//     line-height: 0em;
-//     margin-bottom: 50px;
-//     font-weight: 200;
-//   }
-//   h2 {
-//     margin-left: 25px;
-//     font-size: 1.6em;
-//     line-height: .5em;
-//     font-weight: 200;
-//   }
-// }
-
 /**** Isotope Filtering ****/
 
 .isotope-item {
@@ -575,11 +398,55 @@ section {
     -o-background-size: cover;
     background-size: cover;
     @include background(url('../img/geo.png'), linear-gradient(#F9F9F9, #D7D8DA) left repeat);
+  }
 
+  &.fondo-geo-ad {
+    background-repeat: no-repeat; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    @include background(url('../img/geo.png') $AD-hex);
+    h1 {
+      color: white;
+    }
+  }
+  &.fondo-geo-nt {
+    background-repeat: no-repeat; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    @include background(url('../img/geo.png') $NT-hex);
+    h1 {
+      color: white;
+    }
+  }
+  &.fondo-geo-ld {
+    background-repeat: no-repeat; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    @include background(url('../img/geo.png') $LD-hex);
+    h1 {
+      color: white;
+    }
+  }
+  &.fondo-geo-ia {
+    background-repeat: no-repeat; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    @include background(url('../img/geo.png') $IA-hex);
+    h1 {
+      color: white;
+    }
   }
 
   h1 {
-    display: table-cell;
+    display: block;
     vertical-align: middle;
     text-align: center;
     font-size: 5em;
@@ -588,10 +455,10 @@ section {
   }
 
   ul {
-    display: table-cell;
+    display: block;
     vertical-align: middle;
     margin: 0 auto;
-    width: 450px;
+    width: 100%;
   }
 
   li {

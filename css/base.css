@@ -174,132 +174,6 @@ footer {
     -moz-background-clip: padding;
     background-clip: padding-box; }
 
-.header {
-  display: block;
-  color: #fff;
-  margin-left: 100px;
-  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.7); }
-  .header h1 {
-    padding-top: 500px;
-    margin-left: 20px;
-    font-size: 5em;
-    line-height: 0em;
-    margin-bottom: 50px;
-    font-weight: 200; }
-  .header h2 {
-    margin-left: 25px;
-    font-size: 1.6em;
-    font-weight: 200; }
-
-.institucional {
-  display: block;
-  color: #fff;
-  margin-left: 100px;
-  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.7); }
-  .institucional h1 {
-    padding-top: 450px;
-    font-size: 5em;
-    line-height: 1em;
-    margin-bottom: 30px;
-    font-weight: 200; }
-  .institucional h2 {
-    font-size: 3em;
-    font-weight: 200; }
-  .institucional h3 {
-    padding-top: 450px;
-    font-size: 3em;
-    line-height: 1em;
-    margin-bottom: 50px;
-    font-weight: 200; }
-  .institucional ul {
-    padding-left: 20px;
-    list-style: disc; }
-  .institucional li {
-    width: 70%;
-    font-size: 2.5em;
-    font-weight: 200;
-    line-height: 1.5em;
-    margin-bottom: 20px; }
-
-.ejes {
-  display: block;
-  color: #fff;
-  margin-left: 100px;
-  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.7); }
-  .ejes h1 {
-    padding-top: 540px;
-    font-size: 5em;
-    line-height: 0em;
-    margin-bottom: 50px;
-    font-weight: 200;
-    float: left; }
-  .ejes ul {
-    padding: 0;
-    margin: 0; }
-  .ejes li {
-    margin-right: 10px;
-    float: left;
-    font-size: 1.7em;
-    font-weight: 600;
-    letter-spacing: -.06em;
-    display: inline-block;
-    vertical-align: middle;
-    text-align: center;
-    width: 200px;
-    height: 120px;
-    padding-top: 80px;
-    margin-top: 450px; }
-  .ejes li:first-child {
-    margin-left: 60px; }
-  .ejes .AD {
-    height: 135px;
-    padding-top: 65px;
-    background-color: rgba(106, 210, 231, 0.8); }
-  .ejes .LD {
-    background-color: rgba(227, 85, 53, 0.8); }
-  .ejes .IA {
-    background-color: rgba(245, 185, 5, 0.8); }
-  .ejes .NT {
-    background-color: rgba(51, 125, 204, 0.8); }
-  .ejes .BAM {
-    background-color: rgba(68, 171, 85, 0.8); }
-
-.objetivos ul {
-  padding-top: 350px; }
-
-.ejes-descripcion {
-  display: block;
-  color: #fff;
-  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.7); }
-  .ejes-descripcion h1 {
-    padding-left: 100px;
-    padding-top: 540px;
-    font-size: 5em;
-    line-height: 0em;
-    margin-bottom: 50px;
-    font-weight: 200; }
-  .ejes-descripcion h2 {
-    width: 75%;
-    padding-left: 100px;
-    font-size: 3em;
-    font-weight: 200; }
-  .ejes-descripcion .AD {
-    background-color: rgba(14, 75, 88, 0);
-    background-image: -webkit-linear-gradient(top, rgba(14, 75, 88, 0) 0%, rgba(14, 75, 88, 0.8) 100%);
-    background-image: linear-gradient(to bottom,rgba(14, 75, 88, 0) 0%, rgba(14, 75, 88, 0.8) 100%); }
-  .ejes-descripcion .LD {
-    background-color: rgba(227, 85, 53, 0);
-    background-image: -webkit-linear-gradient(top, rgba(227, 85, 53, 0) 0%, rgba(227, 85, 53, 0.8) 100%);
-    background-image: linear-gradient(to bottom,rgba(227, 85, 53, 0) 0%, rgba(227, 85, 53, 0.8) 100%); }
-  .ejes-descripcion .IA {
-    background-color: rgba(245, 185, 5, 0);
-    background-image: -webkit-linear-gradient(top, rgba(245, 185, 5, 0) 0%, rgba(245, 185, 5, 0.8) 100%);
-    background-image: linear-gradient(to bottom,rgba(245, 185, 5, 0) 0%, rgba(245, 185, 5, 0.8) 100%); }
-  .ejes-descripcion .NT {
-    background-color: rgba(51, 125, 204, 0);
-    background-image: -webkit-linear-gradient(top, rgba(51, 125, 204, 0) 0%, rgba(51, 125, 204, 0.8) 100%);
-    background-image: linear-gradient(to bottom,rgba(51, 125, 204, 0) 0%, rgba(51, 125, 204, 0.8) 100%); }
-
 /**** Isotope Filtering ****/
 .isotope-item {
   z-index: 2; }
@@ -448,18 +322,58 @@ section {
     background-size: cover;
     background: url("../img/geo.png"), -webkit-linear-gradient(#f9f9f9, #d7d8da) left repeat;
     background: url("../img/geo.png"), linear-gradient(#f9f9f9, #d7d8da) left repeat; }
+  section.fondo-geo-ad {
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background: url("../img/geo.png") #00b7f1;
+    background: url("../img/geo.png") #00b7f1; }
+    section.fondo-geo-ad h1 {
+      color: white; }
+  section.fondo-geo-nt {
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background: url("../img/geo.png") #1856dd;
+    background: url("../img/geo.png") #1856dd; }
+    section.fondo-geo-nt h1 {
+      color: white; }
+  section.fondo-geo-ld {
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background: url("../img/geo.png") #18ddd6;
+    background: url("../img/geo.png") #18ddd6; }
+    section.fondo-geo-ld h1 {
+      color: white; }
+  section.fondo-geo-ia {
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background: url("../img/geo.png") #6e18dd;
+    background: url("../img/geo.png") #6e18dd; }
+    section.fondo-geo-ia h1 {
+      color: white; }
   section h1 {
-    display: table-cell;
+    display: block;
     vertical-align: middle;
     text-align: center;
     font-size: 5em;
     line-height: 2em;
     text-transform: uppercase; }
   section ul {
-    display: table-cell;
+    display: block;
     vertical-align: middle;
     margin: 0 auto;
-    width: 450px; }
+    width: 100%; }
   section li {
     font-size: 1.5em;
     float: left;

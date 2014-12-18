@@ -463,7 +463,7 @@ footer {
 
 body {
     font-family: "Gotham","Open Sans", "Helvetica Neue", "Helvetica", sans-serif;
-    font-size: 13px;
+    font-size: 1em;
     line-height: 1.7em;
     background: #fff;
     color: #000;
@@ -495,7 +495,7 @@ h1, h2, h3, p, ul, ol, pre, dl {
 }
 
 h1, h2, #super-list, .element, .tagline, #index-list, 
-.super-list .link {
+.super-list .link, li {
   font-family: "Decima Mono", "Helvetica Neue", Arial, sans-serif;
   font-weight: 300;
 }
@@ -507,8 +507,6 @@ h1, h2, #super-list, .element, .tagline, #index-list,
 h1, h2, h3 { font-weight: normal; }
 
 h1 {
-  font-size: 32px;
-  line-height: 1.1em;
 }
 
 h2 {
@@ -556,6 +554,39 @@ section {
   margin: 0;
   max-width: none;
   height: 100vh;
+
+  &.fondo-geo-gradiente {
+    background-image: url('../img/geo.png') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    @include background(linear-gradient(#F9F9F9, #D7D8DA) left repeat);
+
+  }
+
+  h1 {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 5em;
+    line-height: 2em;
+    text-transform: uppercase;
+  }
+
+  ul {
+    display: table-cell;
+    vertical-align: middle;
+    margin: 0 auto;
+    width: 450px;
+  }
+
+  li {
+    float: left;
+    width: 150px;
+    border: 1px solid red;
+    text-align: center;
+  }
 
   .slide-01 {
 

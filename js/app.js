@@ -1,16 +1,30 @@
 // Maneja play pause video
+var videos;
 $(document).ready(function() {
-    $('#pagepiling').pagepiling(
-    {
-  		afterLoad:
-  		function(anchorLink, index){    	
-        	console.log ("Enter", index);
-        },
-        onLeave:
-  		function(anchorLink, index){    	
-        	console.log ("Exit", index);
-        }
+	
+    $('#pagepiling').pagepiling({
 
+  		afterLoad:
+  		function(anchorLink, index){
+  			var id_vid = "#vid"+index;
+  			var video = $(id_vid);
+  			console.log ("Slide", index);
+  			try {
+  				video[0].play();	
+  			}catch (err) { }
+        },
+	    onLeave:
+
+  		function(anchorLink, index){
+
+
+  			var id_vid = "#vid"+index;
+  			var video = $(id_vid);
+  			try {
+  				video[0].pause();	
+  			}catch (err) { }
+  			//video[0].pause;
+        }
     });
 });
 

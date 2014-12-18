@@ -5,49 +5,18 @@
 		<meta charset="utf-8" />
 		<title>Buenos Aires Ciudad</title>
 		<link href="css/base.css" rel="stylesheet"/>
+
 	</head>
 
 	<body>
 
-		<section class="fondo-geo-gradiente">
-			<img src="img/slide-01-labgcba.png" alt="">  
-		</section>
-		<section>
-			<img src="img/slide-02-contexto-internacional.jpg" alt="">
-		</section>
-		<section>
-			<img src="img/slide-03-tapas.jpg" alt="">
-		</section>
-		
-		<section>
-			<video width="100%" loop muted class="video">    
-			    <source src="video/21 - BA Digital - Cut.mp4" type="video/mp4" />    
-			</video> 
-			<img src="img/slide-04-otras-iniciativas.jpg" alt="">
-		</section>
-
-		<section class="fondo-geo-gradiente">
-			<h1>Apertura<br>
-			Colaboración<br>
-			Innovación</h1>
-		</section>
-		
-		<section class="fondo-geo-gradiente">
-			<ul>
-				<li><span class="ld"></span>Laboratorio de datos</li>
-				<li><span class="ad"></span>Apertura de datos</li>
-				<li><span class="nt"></span>Laboratorio de nuevas tecnologías</li>
-				<li><span class="ia"></span>Innovación abierta</li>
-			</ul>
-		</section>
-
-		<section class="dashboard">
+<div id="pagepiling">
+		<section class="dashboard section">
 			<div id="content">
 
 				<div id="options" class="clearfix">
 
 					Filtrar: 
-
 					<select class="filter option-set" data-filter-group="eje">
 						<option data-filter-value="" selected="selected">Ver todos los ejes</option>
 						<option data-filter-value=".AD">Apertura de datos</option>
@@ -84,9 +53,43 @@
 				</div>
 			</div>
 		</section>
-		<section>
+		<section class="section fondo-geo-gradiente">
+			<video width="100%" loop muted autoplay class="video">    
+			    <source src="video/21 - BA Digital - Cut.mp4" type="video/mp4" />    
+			</video>
+			<img src="img/slide-01-labgcba.png" alt="">
+		</section>
+
+		<section class="section">
+			<img src="img/slide-02-contexto-internacional.jpg" alt="">
+		</section>
+
+		<section class="section">
+			<img src="img/slide-03-tapas.jpg" alt="">
+		</section>
+
+
+		<section class="fondo-geo-gradiente section">
+			<h1>Apertura<br>
+			Colaboración<br>
+			Innovación</h1>
+		</section>
+
+		<section class="section fondo-geo-gradiente">
+			<ul>
+				<li><span class="ld"></span>Laboratorio de datos</li>
+				<li><span class="ad"></span>Apertura de datos</li>
+				<li><span class="nt"></span>Laboratorio de nuevas tecnologías</li>
+				<li><span class="ia"></span>Innovación abierta</li>
+			</ul>
+		</section>
+		
+
+
+		<section class="section">
 			<h1>Apertura de datos</h1>
 		</section>
+</div>
 		
 		<footer>
 
@@ -98,42 +101,12 @@
 			</div>
 		</footer>
 
-
+		
 		<script src="js/jquery-1.10.2.min.js"></script>
-		<!-- <script src="components/pagepiling.js/jquery.pagepiling.min.js"></script> -->
+		<script src="js/jquery.pagepiling.js"></script>
 		<script src="js/jquery.sheetrock.min.js"></script>
 		<script src="js/handlebars.min.js"></script>
 		<script src="js/jquery.isotope.min.js"></script>
 		<script src="js/app.js"></script>
-		<script>
-		  $(document).ready(function() {
-	            // Get media - with autoplay disabled (audio or video)
-	            var media = $('video').not("[autoplay='autoplay']");
-	            var tolerancePixel = 40;
-
-	            function checkMedia(){
-	                // Get current browser top and bottom
-	                var scrollTop = $(window).scrollTop() + tolerancePixel;
-	                var scrollBottom = $(window).scrollTop() + $(window).height() - tolerancePixel;
-
-	                //if ($(window).scrollTop() > $(window).height() - 10) {
-	                media.each(function(index, el) {
-	                    var yTopMedia = $(this).offset().top;
-	                    var yBottomMedia = $(this).height() + yTopMedia;
-
-	                    if(scrollTop < yBottomMedia && scrollBottom > yTopMedia){
-	                        $(this).get(0).play();
-	                    } else {
-	                        $(this).get(0).pause();
-	                    }
-	                });
-
-	                //}
-	            }
-	            $(document).on('scroll', checkMedia);
-	        });
-
-   		</script>
-
 	</body>
 </html>

@@ -1,3 +1,9 @@
+// Maneja play pause video
+$(document).ready(function() {
+    $('#pagepiling').pagepiling();
+    $(document).on('scroll', checkMedia);
+});
+
 /*
 
  Hack sobre Isotope para centrar luego de calcular la posición de cada item.
@@ -203,8 +209,6 @@ $('#odd').on('change', function () {
 
 });
 
-// $(document).ready(function() {
-//     $('#pagepiling').pagepiling({
-//         sectionSelector: 'section',
-//     });
-// });
+
+
+

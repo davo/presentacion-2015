@@ -1,3 +1,37 @@
+// Maneja play pause video
+var videos;
+$(document).ready(function() {
+	
+    $('#pagepiling').pagepiling({
+    	scrollingSpeed: 200,
+    	easing: 'linear',
+    	css3: true,
+    	menu: null,
+
+  		afterLoad:
+  		function(anchorLink, index){
+  			var id_vid = "#vid"+index;
+  			var video = $(id_vid);
+  			console.log ("Slide", index);
+  			try {
+  				video[0].play();	
+  			}catch (err) { }
+        },
+	    onLeave:
+
+  		function(anchorLink, index){
+
+
+  			var id_vid = "#vid"+index;
+  			var video = $(id_vid);
+  			try {
+  				video[0].pause();	
+  			}catch (err) { }
+  			//video[0].pause;
+        }
+    });
+});
+
 /*
 
  Hack sobre Isotope para centrar luego de calcular la posición de cada item.
@@ -193,9 +227,14 @@ $('#odd').on('change', function () {
 
 });
 
+<<<<<<< HEAD
 // $(document).ready(function() {
 //     $('#pagepiling').pagepiling({
 //         sectionSelector: 'section',
 //     });
 // });
+=======
+
+
+>>>>>>> e468253c3cc2f44a5cba198957196c684e040f39
 

@@ -3,4 +3,12 @@
 log/*.log
 tmp/**
 node_modules/
+<<<<<<< HEAD
 .sass-cache
+=======
+.sass-cache
+video/
+components/
+src/
+css/base.css
+>>>>>>> e468253c3cc2f44a5cba198957196c684e040f39
